@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputext" placeholder="Search for item ">
+    <ul class="item">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li> C++</li>
+        <li>Tailwind CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        const inputtext=document.getElementById("inputtext");
+        const items=document
+        .getElementById("item")
+        .getElementsByTagName("li");
+        inputtext.addEventListener("input",function()
+        {
+          const value1=inputtext.value.toLowercase();
+          for(let i=0;i<items.length;i++)
+          {
+            const itemText = items[i].innerText.toLowerCase();
+            if (itemText.includes(value1)) {
+            items[i].style.display = "block";
+          } else {
+            items[i].style.display = "none";
+          }
+          }
+
+        });
+    </script>
+</body>
+</html>

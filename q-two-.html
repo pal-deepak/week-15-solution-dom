@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Theme</title>
+</head>
+<body>
+    <h1 id="h1">This is a Light Mode</h1>
+    <button  onclick="Toggle()" >Toggle Theme</button>
+    <script>
+let h1=document.getElementById("h1");
+
+   function Toggle()
+   {
+    let color=document.body.style.backgroundColor;
+    if(color =="black")
+    {
+        document.body.style.backgroundColor="white";
+        h1.innerText="This is a Light Mode";
+        h1.style.color="black";
+    }
+    else{
+        document.body.style.backgroundColor="black";
+        h1.innerText="This is a Dark Mode";
+       h1.style.color="white";
+    }
+   }
+    </script>
+</body>
+</html>

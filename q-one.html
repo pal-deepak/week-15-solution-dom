@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 >Update Your Profile</h1>
+    <input id="file" type="file" onchange="changeProfile()">
+    <h3>Your Profile Picture</h3>
+    <img id="image" src="" alt="No Profile Picture">
+<script>
+    let file=document.getElementById("file");
+    let image=document.getElementById("image");
+   
+    function changeProfile()
+    {
+        let reader=new FileReader();
+        reader.onload=function (e)
+        {
+            image.src=e.target.result;
+        }
+        reader.readAsDataURL(file.files[0]);
+    }
+       
+       
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title onclick="change()">Hidden</title>
+    <style>
+        img{
+            margin-top: 7px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Your Image is Visible</h1>
+    <button onclick="change()">Toggle</button>
+    <br>
+    <img id ="img" src="./web development image.png" alt="">
+    <script>
+    function change()
+    {   let h1=document.getElementById("h1");
+        let img=document.getElementById("img");
+        if(img.style.opacity==0)
+        {
+            h1.innerText="Your Image is Visible";
+            img.style.opacity=100;
+        }
+        else{
+            img.style.opacity=0;
+            h1.innerText="Your Image is hidden";
+        }
+
+                
+    }    
+    </script>
+</body>
+</html>
